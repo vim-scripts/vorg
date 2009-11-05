@@ -1,0 +1,73 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2842
+
+vorg is a simple organizer file format for managing your notes and tasks. It was inspired by org-mode for emacs but the format is different. 
+It is still very much work-in-progress. 
+
+Usage:	
+create a file with the .vorg extension and insert the following line:		
+
+vim:ft=vorg
+		
+vorg format:
+
+- Topic Title
+  - Sub Topic Title (tag)
+    - Sub Sub Topic Title
+      sub sub topic text
+      [ ] sub sub topic task
+		
+Notes: 
+
+  ( vorg works best with the vim blackboard theme)
+
+  - To indent sub topics in insert mode, use <TAB>
+  - In normal mode, use <TAB> to fold and unfold topics
+  - You can also use asterisk signs (*) instead of minus signs(-)
+  - Tasks are indicated using a pair of square brackets with a blank inside [ ]
+  - You can create tasks without sub items by omitting the -
+
+More Info:
+
+		- Topic with a context @context
+		- Topic with a deadline < {date}
+		- Topic with a list of tags (tag1,tag2,tag3)
+		- Topic with a timestamp | {date} @ {time}
+		- Topic with a timestamp | {datetime}
+		- Topic with a text content
+		  some text...
+
+
+ 		Insert-mode Shortcuts:
+
+		-- create a new indented item
+		-= create a new task
+
+		ctrl+j move line down
+		ctrl+k move line up
+
+		dd - current date
+		dt - current date+time
+
+
+		Normal-mode Shortcuts:
+		
+		<TAB> expand/collapse topics, use <shift> for all sub-topics
+
+		ctrl+t find tags (type the tag name and then press <CR>)
+		ctrl+o find contexts (type the context and then press <CR>)
+
+		ctrl+j  shifts line down
+		ctrl+k shifts line up
+
+		,c checkmark a task
+		,u uncheckmark a task
+
+		,w follow hyperlink
+
+Thanks Niels AdB for Tip 1557!
+Thanks Frank Butler for Tip 646!
+
+More info can be found inside the script..
+For updates follow me on twitter (L3V3L9) and look for the upcoming vorg screencast.
+
+
