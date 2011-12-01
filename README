@@ -3,24 +3,20 @@ This is a mirror of http://www.vim.org/scripts/script.php?script_id=2842
 vorg is a simple organizer file format for managing your notes and tasks. It was inspired by org-mode for emacs but the format is different. 
 It is still very much work-in-progress. 
 
-Usage:	
-create a file with the .vorg extension and insert the following line:		
+Usage: 
 
-vim:ft=vorg
-		
-vorg format:
+Create a file with the .vorg extension and use the following format:
 
-- Topic Title
-  - Sub Topic Title (tag)
-    - Sub Sub Topic Title
-      sub sub topic text
-      [ ] sub sub topic task
+- Topic
+  - Subtopic <tag1> <tag2> 
+    - Subsubtopic
+      Subsubtopic text goes here
+    - [ ] A task
+    - [ ] Another task
 		
 Notes: 
 
-  ( vorg works best with the vim blackboard theme)
-
-  - To indent sub topics in insert mode, use <TAB>
+  - To indent sub topics in insert mode use <TAB>
   - In normal mode, use <TAB> to fold and unfold topics
   - You can also use asterisk signs (*) instead of minus signs(-)
   - Tasks are indicated using a pair of square brackets with a blank inside [ ]
@@ -28,12 +24,12 @@ Notes:
 
 More Info:
 
-		- Topic with a context @context
 		- Topic with a deadline < {date}
-		- Topic with a list of tags (tag1,tag2,tag3)
-		- Topic with a timestamp | {date} @ {time}
-		- Topic with a timestamp | {datetime}
-		- Topic with a text content
+		- Topic with tags <tag1> <tag2> <tag3>
+		- Topic with a timestamp ~ {date} @ {time}
+		- Topic with a timestamp ~ {datetime}
+		- {date} @ {time} ~ Topic with a timestamp
+		- Topic with text content
 		  some text...
 
 
@@ -47,7 +43,6 @@ More Info:
 
 		dd - current date
 		dt - current date+time
-
 
 		Normal-mode Shortcuts:
 		
@@ -69,5 +64,4 @@ Thanks Frank Butler for Tip 646!
 
 More info can be found inside the script..
 For updates follow me on twitter (L3V3L9) and look for the upcoming vorg screencast.
-
 
